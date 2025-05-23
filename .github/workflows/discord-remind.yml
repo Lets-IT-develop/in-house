@@ -1,0 +1,18 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Discord 일정 리마인드
+
+on:
+  schedule:
+    - cron: "0 12 * * 6"
+
+jobs:
+  message:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Discord Webhook Action
+      uses: tsickert/discord-webhook@v7.0.0
+      with:
+        webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
+        content: "📆 오후 11시에 Let's IT 정기 회의가 예정되어 있습니다!"
