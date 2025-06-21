@@ -18,4 +18,4 @@ jobs:
       uses: tsickert/discord-webhook@v7.0.0
       with:
         webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
-        content: "기말고사 휴동기간입니다 😴"
+        content: "📆 오후 11시에 Let's IT 정기 회의가 예정되어 있습니다!"
